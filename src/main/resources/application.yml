@@ -1,0 +1,53 @@
+server:
+  port: 8080
+
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ai_task_management?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    username: root
+    password: 20050331Ma.
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+      database: 0
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: isDeleted
+      logic-delete-value: true
+      logic-not-delete-value: false
+  type-handlers-package: com.baomidou.mybatisplus.extension.handlers
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+# AI配置
+ai:
+  provider: qwen  # 默认 provider
+  api-key: ${QWEN_API_KEY}  # 默认 API Key
+  model: qwen-turbo  # 默认模型
+
+  providers:
+    - name: qwen
+      api-key: ${QWEN_API_KEY}
+      model: qwen-turbo  # AI服务提供商: openai, qwen
+    - name: openai
+      base-url: https://api.openai.com/v1/chat/completions
+      api-key: ${OPENAI_API_KEY}
+      model: gpt-3.5-turbo
+  timeout: 30000  # 请求超时时间（毫秒）
+  max-retries: 3  # 最大重试次数
