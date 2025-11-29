@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/tasks")
 @RequiredArgsConstructor
-@Tag(name = "任务管理", description = "任务的统计接口")
+@Tag(name = "任务统计", description = "任务的统计接口")
 public class TaskStatisticController {
 
     @Autowired

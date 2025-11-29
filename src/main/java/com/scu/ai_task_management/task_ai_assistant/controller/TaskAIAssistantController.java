@@ -22,7 +22,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/tasks")
 @RequiredArgsConstructor
-@Tag(name = "任务管理", description = "任务的AI辅助功能")
+@Tag(name = "任务AI功能", description = "任务的AI辅助功能")
 public class TaskAIAssistantController {
 
     @Autowired
