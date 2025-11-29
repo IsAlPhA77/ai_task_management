@@ -6,6 +6,8 @@
 *.ipr
 *.iws
 
+.gitignore
+
 # VSCode
 .vscode/
 
