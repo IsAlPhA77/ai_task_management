@@ -6,7 +6,7 @@ import com.scu.ai_task_management.infra.ai.model.TaskParseRequest;
 import com.scu.ai_task_management.infra.ai.service.AIService;
 import com.scu.ai_task_management.task_basic.domain.Task;
 import com.scu.ai_task_management.task_basic.domain.TaskMapper;
-import com.scu.ai_task_management.task_duration_prediction.model.DurationPredictionRequestDTO;
+import com.scu.ai_task_management.task_duration_prediction.model.DurationPredictionDTO;
 import com.scu.ai_task_management.task_duration_prediction.model.DurationPredictionVO;
 import com.scu.ai_task_management.task_duration_prediction.service.TaskDurationPredictionService;
 import com.scu.ai_task_management.task_query.domain.TaskHistory;
@@ -38,7 +38,7 @@ public class TaskDurationPredictionServiceImpl implements TaskDurationPrediction
     private final Map<String, DurationPredictionVO> predictionCache = new HashMap<>();
 
     @Override
-    public List<DurationPredictionVO> getDurationPredictions(Long userId, DurationPredictionRequestDTO requestDTO) {
+    public List<DurationPredictionVO> getDurationPredictions(Long userId, DurationPredictionDTO requestDTO) {
         log.info("获取任务耗时预测: userId={}, request={}", userId, requestDTO);
 
         // 获取待预测的任务
@@ -61,8 +61,8 @@ public class TaskDurationPredictionServiceImpl implements TaskDurationPrediction
         log.info("预测单个任务耗时: userId={}, taskId={}", userId, taskId);
 
         Task task = taskUtil.getOwnedTask(userId, taskId);
-        DurationPredictionRequestDTO requestDTO = DurationPredictionRequestDTO.builder()
-                .predictionMethod(DurationPredictionRequestDTO.PredictionMethod.HYBRID)
+        DurationPredictionDTO requestDTO = DurationPredictionDTO.builder()
+                .predictionMethod(DurationPredictionDTO.PredictionMethod.HYBRID)
                 .build();
 
         return getDurationPrediction(userId, task, requestDTO);
@@ -122,7 +122,7 @@ public class TaskDurationPredictionServiceImpl implements TaskDurationPrediction
     /**
      * 获取需要预测的任务
      */
-    private List<Task> getTasksForPrediction(Long userId, DurationPredictionRequestDTO requestDTO) {
+    private List<Task> getTasksForPrediction(Long userId, DurationPredictionDTO requestDTO) {
         taskUtil.ensureUserId(userId);
 
         LambdaQueryWrapper<Task> wrapper = new LambdaQueryWrapper<>();
@@ -141,7 +141,7 @@ public class TaskDurationPredictionServiceImpl implements TaskDurationPrediction
     /**
      * 获取任务耗时预测
      */
-    private DurationPredictionVO getDurationPrediction(Long userId, Task task, DurationPredictionRequestDTO requestDTO) {
+    private DurationPredictionVO getDurationPrediction(Long userId, Task task, DurationPredictionDTO requestDTO) {
         try {
             String cacheKey = userId + "_" + task.getId() + "_" + requestDTO.getPredictionMethod();
             if (predictionCache.containsKey(cacheKey)) {

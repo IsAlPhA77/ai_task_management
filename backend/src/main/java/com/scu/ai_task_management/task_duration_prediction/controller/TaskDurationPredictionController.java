@@ -2,7 +2,7 @@ package com.scu.ai_task_management.task_duration_prediction.controller;
 
 import com.scu.ai_task_management.common.annotation.CurrentUserId;
 import com.scu.ai_task_management.common.utils.Result;
-import com.scu.ai_task_management.task_duration_prediction.model.DurationPredictionRequestDTO;
+import com.scu.ai_task_management.task_duration_prediction.model.DurationPredictionDTO;
 import com.scu.ai_task_management.task_duration_prediction.model.DurationPredictionVO;
 import com.scu.ai_task_management.task_duration_prediction.service.TaskDurationPredictionService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -29,7 +29,7 @@ public class TaskDurationPredictionController {
     @Operation(summary = "获取耗时预测", description = "为指定任务生成耗时预测")
     public Result<List<DurationPredictionVO>> getPredictions(
             @CurrentUserId Long userId,
-            @RequestBody DurationPredictionRequestDTO requestDTO) {
+            @RequestBody DurationPredictionDTO requestDTO) {
 
         log.info("获取耗时预测: userId={}", userId);
         List<DurationPredictionVO> predictions = durationPredictionService

@@ -1,0 +1,9 @@
+{
+  "name": "ai-task-manager",
+  "version": "1.0.0",
+  "description": "AI Task Management System",
+  "scripts": {
+    "start": "http-server -p 8000 -o",
+    "dev": "http-server -p 8000"
+  }
+}

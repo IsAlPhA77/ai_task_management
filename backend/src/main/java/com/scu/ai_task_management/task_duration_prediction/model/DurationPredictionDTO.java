@@ -14,7 +14,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class DurationPredictionRequestDTO {
+public class DurationPredictionDTO {
 
     /**
      * 任务ID列表，为空则预测所有任务

@@ -1,6 +1,6 @@
 package com.scu.ai_task_management.task_duration_prediction.service;
 
-import com.scu.ai_task_management.task_duration_prediction.model.DurationPredictionRequestDTO;
+import com.scu.ai_task_management.task_duration_prediction.model.DurationPredictionDTO;
 import com.scu.ai_task_management.task_duration_prediction.model.DurationPredictionVO;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public interface TaskDurationPredictionService {
      * @param requestDTO 请求参数
      * @return 耗时预测列表
      */
-    List<DurationPredictionVO> getDurationPredictions(Long userId, DurationPredictionRequestDTO requestDTO);
+    List<DurationPredictionVO> getDurationPredictions(Long userId, DurationPredictionDTO requestDTO);
 
     /**
      * 为单个任务生成耗时预测
