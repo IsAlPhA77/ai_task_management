@@ -108,6 +108,18 @@ ai_task_management/
 └── README.md
 ```
 
+## 项目展示
+
+![屏幕截图 2025-11-29 221429](C:\Users\MZH\Pictures\Screenshots\屏幕截图 2025-11-29 221429.png)
+
+![屏幕截图 2025-11-29 221440](C:\Users\MZH\Pictures\Screenshots\屏幕截图 2025-11-29 221440.png)
+
+![屏幕截图 2025-11-29 221453](C:\Users\MZH\Pictures\Screenshots\屏幕截图 2025-11-29 221453.png)
+
+![屏幕截图 2025-11-29 221506](C:\Users\MZH\Pictures\Screenshots\屏幕截图 2025-11-29 221506.png)
+
+![屏幕截图 2025-11-29 221525](C:\Users\MZH\Pictures\Screenshots\屏幕截图 2025-11-29 221525.png)
+
 ## 快速开始
 
 ### 环境要求
