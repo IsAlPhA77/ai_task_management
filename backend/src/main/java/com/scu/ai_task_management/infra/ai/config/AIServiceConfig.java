@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * AI服务配置类
- * 注意：ObjectMapper已在JacksonConfig中配置，这里不再重复创建
+ * 注意: ObjectMapper已在JacksonConfig中配置，这里不再重复创建
  */
 @Configuration
 public class AIServiceConfig {

@@ -22,7 +22,7 @@ public class DurationPredictionRequestDTO {
     private List<Long> taskIds;
 
     /**
-     * 预测方法：SIMPLE-简单统计，AI-人工智能，HYBRID-混合方法
+     * 预测方法: SIMPLE-简单统计，AI-人工智能，HYBRID-混合方法
      */
     private PredictionMethod predictionMethod = PredictionMethod.HYBRID;
 

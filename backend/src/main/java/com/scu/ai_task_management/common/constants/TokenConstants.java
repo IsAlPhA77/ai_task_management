@@ -23,7 +23,7 @@ public class TokenConstants {
     public static final int REFRESH_TOKEN_MAX_AGE = 7 * 24 * 3600; // 7 天
     public static final boolean HTTP_ONLY = true;
     public static final boolean SECURE = true; // 生产环境必须开启 HTTPS
-    public static final String SAME_SITE = "Lax"; // 防 CSRF：Lax 或 Strict
+    public static final String SAME_SITE = "Lax"; // 防 CSRF: Lax 或 Strict
     public static final String BLACKLIST_VALUE = "1";
     public static final String X_NEW_TOKEN = "X-NEW-TOKEN";
 }

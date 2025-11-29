@@ -170,7 +170,7 @@ public class AIServiceImpl implements AIService {
                         .isSingleTask(isSingleTask)
                         .build();
             } else {
-                // 兼容旧格式：单个任务
+                // 兼容旧格式: 单个任务
                 TaskParseResponse singleTask = parseSingleTask(jsonNode);
                 return TaskBatchParseResponse.builder()
                         .tasks(List.of(singleTask))
@@ -245,7 +245,7 @@ public class AIServiceImpl implements AIService {
     }
 
     /**
-     * 本地保底策略：将用户输入转换为基础任务
+     * 本地保底策略: 将用户输入转换为基础任务
      */
     private TaskParseResponse buildFallbackResponse(TaskParseRequest request) {
         return FallbackTaskUtil.parse(request.getNaturalLanguage());

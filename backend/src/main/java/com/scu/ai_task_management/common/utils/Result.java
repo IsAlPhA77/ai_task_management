@@ -3,7 +3,7 @@ package com.scu.ai_task_management.common.utils;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
 
-import static edu.scu.playermanage.common.constants.ExceptionConstants.BUSINESS_CODE_OK;
+import static com.scu.ai_task_management.common.constants.ExceptionConstants.BUSINESS_CODE_OK;
 
 
 @Data

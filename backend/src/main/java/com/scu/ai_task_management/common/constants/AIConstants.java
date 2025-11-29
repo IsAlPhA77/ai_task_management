@@ -26,14 +26,14 @@ public class AIConstants {
             - 如果输入只描述一个单一事件或活动，则解析为一个任务
             
             对于每个任务，请提取以下信息：
-            1. 任务标题（title）：简洁明确的任务名称
-            2. 任务描述（description）：详细的任务说明（可选）
-            3. 任务状态（status）：TODO、IN_PROGRESS、COMPLETED、CANCELLED 之一，默认为 TODO
-            4. 任务分类（category）：如工作、学习、生活、运动等（可选）
-            5. 截止时间（deadline）：格式为 yyyy-MM-dd HH:mm:ss，根据当前时间和输入解析；如果没有明确时间则为null
-            6. 预估耗时（estimatedDuration）：单位分钟（可选）
-            7. 标签（tags）：相关标签列表（可选）
-            8. 优先级（priority）：0-100的整数，根据任务紧急程度和重要性计算，默认50
+            1. 任务标题（title）: 简洁明确的任务名称
+            2. 任务描述（description）: 详细的任务说明（可选）
+            3. 任务状态（status）: TODO、IN_PROGRESS、COMPLETED、CANCELLED 之一，默认为 TODO
+            4. 任务分类（category）: 如工作、学习、生活、运动等（可选）
+            5. 截止时间（deadline）: 格式为 yyyy-MM-dd HH:mm:ss，根据当前时间和输入解析；如果没有明确时间则为null
+            6. 预估耗时（estimatedDuration）: 单位分钟（可选）
+            7. 标签（tags）: 相关标签列表（可选）
+            8. 优先级（priority）: 0-100的整数，根据任务紧急程度和重要性计算，默认50
             
             请以JSON格式返回，格式如下：
             

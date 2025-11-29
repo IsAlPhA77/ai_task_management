@@ -19,14 +19,14 @@ public interface TaskMapper extends BaseMapper<Task> {
 
     /**
      * 查询已逾期的未完成任务
-     * 注意：@TableLogic 会自动过滤已删除的记录，但这里显式检查以确保准确性
+     * 注意: @TableLogic 会自动过滤已删除的记录，但这里显式检查以确保准确性
      */
     @Select("SELECT * FROM tasks WHERE user_id = #{userId} AND deadline < #{now} AND status != 'COMPLETED' AND is_deleted = false")
     List<Task> findOverdueTasks(@Param("userId") Long userId, @Param("now") LocalDateTime now);
 
     /**
      * 查询即将到期的任务（N天内）
-     * 注意：@TableLogic 会自动过滤已删除的记录，但这里显式检查以确保准确性
+     * 注意: @TableLogic 会自动过滤已删除的记录，但这里显式检查以确保准确性
      */
     @Select("SELECT * FROM tasks WHERE user_id = #{userId} AND deadline BETWEEN #{now} AND #{futureTime} AND status != 'COMPLETED' AND is_deleted = false")
     List<Task> findUpcomingTasks(@Param("userId") Long userId, @Param("now") LocalDateTime now, @Param("futureTime") LocalDateTime futureTime);

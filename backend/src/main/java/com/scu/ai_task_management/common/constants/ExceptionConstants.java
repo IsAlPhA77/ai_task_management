@@ -1,4 +1,4 @@
-package edu.scu.playermanage.common.constants;
+package com.scu.ai_task_management.common.constants;
 
 public class ExceptionConstants {
 

@@ -13,21 +13,13 @@ import static com.scu.ai_task_management.common.constants.TokenConstants.*;
 
 
 /**
- * CookieTokenUtil：统一管理 AccessToken 和 RefreshToken 的读取与设置
- * - AccessToken：从 Header 获取
- * - RefreshToken：从 HttpOnly Cookie 获取/设置
+ * CookieTokenUtil: 统一管理 AccessToken 和 RefreshToken 的读取与设置
+ * - AccessToken: 从 Header 获取
+ * - RefreshToken: 从 HttpOnly Cookie 获取/设置
  */
 @Component
 public class CookieTokenUtil {
 
-    // ========== 常量 ==========
-
-    /**
-     * 从请求头获取 AccessToken
-     *
-     * @param request HTTP 请求
-     * @return AccessToken(不含 " Bearer " 前缀)
-     */
     public Optional<String> getAccessToken(HttpServletRequest request) {
         String header = request.getHeader("Authorization");
 
@@ -41,12 +33,6 @@ public class CookieTokenUtil {
         return Optional.empty();
     }
 
-    /**
-     * 从 Cookie 获取 RefreshToken
-     *
-     * @param request HTTP 请求
-     * @return RefreshToken
-     */
     public Optional<String> getRefreshToken(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
 
@@ -61,7 +47,6 @@ public class CookieTokenUtil {
                 .findFirst();
     }
 
-    // ========== 设置 RefreshToken 到 Cookie ==========
     public void setRefreshTokenCookie(HttpServletResponse response, String token) {
         ResponseCookie cookie = ResponseCookie.from(REFRESH_TOKEN_COOKIE, token)
                 .httpOnly(HTTP_ONLY)
@@ -73,7 +58,6 @@ public class CookieTokenUtil {
         response.addHeader("Set-Cookie", cookie.toString());
     }
 
-    // ========== 清除 RefreshToken Cookie ==========
     public void clearRefreshTokenCookie(HttpServletResponse response) {
         ResponseCookie cookie = ResponseCookie.from(REFRESH_TOKEN_COOKIE, "")
                 .httpOnly(HTTP_ONLY)

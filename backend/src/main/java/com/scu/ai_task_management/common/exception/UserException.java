@@ -2,7 +2,7 @@ package com.scu.ai_task_management.common.exception;
 
 import org.springframework.http.HttpStatus;
 
-import static edu.scu.playermanage.common.constants.ExceptionConstants.BUSINESS_CODE_BAD_REQUEST;
+import static com.scu.ai_task_management.common.constants.ExceptionConstants.BUSINESS_CODE_BAD_REQUEST;
 
 /**
  * 用户相关异常

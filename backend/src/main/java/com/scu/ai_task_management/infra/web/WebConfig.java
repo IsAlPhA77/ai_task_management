@@ -11,8 +11,8 @@ import java.util.List;
 
 
 /**
- * Web配置：管理拦截器
- * 认证策略：所有请求默认需要认证，白名单路径除外
+ * Web配置: 管理拦截器
+ * 认证策略: 所有请求默认需要认证，白名单路径除外
  */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {

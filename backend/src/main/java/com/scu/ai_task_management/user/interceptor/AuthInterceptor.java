@@ -17,7 +17,7 @@ import static com.scu.ai_task_management.common.constants.TokenConstants.*;
 
 /**
  * AuthInterceptor: 负责用户认证和黑名单校验
- * 注意：由于Spring Security已配置为permitAll，所有认证逻辑由此拦截器负责
+ * 注意: 由于Spring Security已配置为permitAll，所有认证逻辑由此拦截器负责
  */
 @Component
 @Slf4j

@@ -83,7 +83,7 @@ public final class FallbackTaskUtil {
             return parseISODateTime(isoMatcher.group(1));
         }
 
-        // 2. 匹配具体日期（如：12月25日）
+        // 2. 匹配具体日期（如: 12月25日）
         Matcher dateMatcher = DATE_PATTERN.matcher(input);
         if (dateMatcher.find()) {
             int month = Integer.parseInt(dateMatcher.group(1));

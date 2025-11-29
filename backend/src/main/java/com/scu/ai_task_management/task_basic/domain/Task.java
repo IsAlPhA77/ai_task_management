@@ -42,7 +42,7 @@ public class Task {
     private String description;
 
     /**
-     * 任务状态：TODO-待办，IN_PROGRESS-进行中，COMPLETED-已完成，CANCELLED-已取消
+     * 任务状态: TODO-待办，IN_PROGRESS-进行中，COMPLETED-已完成，CANCELLED-已取消
      */
     @TableField("status")
     private TaskStatus status = TaskStatus.TODO;
