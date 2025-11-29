@@ -4,14 +4,14 @@
 
 ## 目录
 
-- [项目简介](https://claude.ai/chat/144f509d-fbd6-4efa-8b8d-2bc8868310e8#项目简介)
-- [技术栈](https://claude.ai/chat/144f509d-fbd6-4efa-8b8d-2bc8868310e8#技术栈)
-- [功能特性](https://claude.ai/chat/144f509d-fbd6-4efa-8b8d-2bc8868310e8#功能特性)
-- [项目结构](https://claude.ai/chat/144f509d-fbd6-4efa-8b8d-2bc8868310e8#项目结构)
-- [快速开始](https://claude.ai/chat/144f509d-fbd6-4efa-8b8d-2bc8868310e8#快速开始)
-- [API文档](https://claude.ai/chat/144f509d-fbd6-4efa-8b8d-2bc8868310e8#api文档)
-- [AI使用记录](https://claude.ai/chat/144f509d-fbd6-4efa-8b8d-2bc8868310e8#ai使用记录)
-- [开发规范](https://claude.ai/chat/144f509d-fbd6-4efa-8b8d-2bc8868310e8#开发规范)
+- [项目简介](#项目简介)
+- [技术栈](#技术栈)
+- [功能特性](#功能特性)
+- [项目结构](#项目结构)
+- [快速开始](#快速开始)
+- [API文档](#api文档)
+- [AI使用记录](#ai使用记录)
+- [开发规范](#开发规范)
 
 ## 项目简介
 
