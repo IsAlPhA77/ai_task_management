@@ -4,6 +4,9 @@ import com.scu.ai_task_management.user.model.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+/**
+ * 用户服务接口
+ */
 public interface UserService {
     /**
      * 用户注册（注册后自动登录）

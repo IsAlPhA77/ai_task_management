@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+/**
+ * AI相关常量定义类
+ */
 public class AIConstants {
 
     // 日期时间相关正则

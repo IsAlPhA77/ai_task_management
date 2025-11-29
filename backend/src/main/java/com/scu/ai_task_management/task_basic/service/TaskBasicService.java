@@ -6,6 +6,9 @@ import com.scu.ai_task_management.task_basic.model.TaskVO;
 
 import java.util.List;
 
+/**
+ * 任务基础服务接口
+ */
 public interface TaskBasicService {
 
     TaskVO createTask(Long userId, TaskCreateDTO createDTO);

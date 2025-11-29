@@ -19,6 +19,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * 任务查询服务实现类
+ */
 @Service
 @Slf4j
 public class TaskQueryServiceImpl implements TaskQueryService {

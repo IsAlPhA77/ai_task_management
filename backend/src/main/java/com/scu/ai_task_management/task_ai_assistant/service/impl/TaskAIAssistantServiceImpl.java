@@ -18,6 +18,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * 任务AI助手服务实现类
+ */
 @Service
 @Slf4j
 public class TaskAIAssistantServiceImpl implements TaskAIAssistantService {

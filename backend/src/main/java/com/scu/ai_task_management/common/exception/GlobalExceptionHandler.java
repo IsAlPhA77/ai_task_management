@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import static com.scu.ai_task_management.common.constants.ExceptionConstants.BUSINESS_CODE_BAD_REQUEST;
 import static com.scu.ai_task_management.common.constants.ExceptionConstants.BUSINESS_CODE_INTERNAL_SERVER_ERROR;
 
+/**
+ * 全局异常处理器
+ */
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {

@@ -9,6 +9,9 @@ import java.util.UUID;
 
 import static com.scu.ai_task_management.common.constants.TokenConstants.*;
 
+/**
+ * JWT工具类
+ */
 @Slf4j
 @Component
 public class JwtUtil {

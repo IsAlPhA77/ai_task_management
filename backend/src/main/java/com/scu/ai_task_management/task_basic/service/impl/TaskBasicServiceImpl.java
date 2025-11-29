@@ -21,6 +21,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * 任务基础服务实现类
+ */
 @Slf4j
 @Service
 public class TaskBasicServiceImpl implements TaskBasicService {
@@ -161,7 +164,7 @@ public class TaskBasicServiceImpl implements TaskBasicService {
 
         Task task = taskUtil.getOwnedTask(userId, id);
 
-        // 软删除 
+        // 软删除
         task.setIsDeleted(true);
         taskMapper.updateById(task);
 

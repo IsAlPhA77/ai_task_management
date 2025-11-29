@@ -6,6 +6,9 @@ import io.jsonwebtoken.security.Keys;
 
 import javax.crypto.SecretKey;
 
+/**
+ * Token相关常量配置类
+ */
 public class TokenConstants {
     public static final String SECRET_KEY_STRING = "It's my ai_task_management project 123456789!";
     public static final SecretKey SECRET_KEY = Keys.hmacShaKeyFor(SECRET_KEY_STRING.getBytes());

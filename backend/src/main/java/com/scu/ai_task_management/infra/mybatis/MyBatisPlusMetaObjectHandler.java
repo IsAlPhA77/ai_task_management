@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
+/**
+ * MyBatis Plus元数据对象处理器
+ */
 @Component
 public class MyBatisPlusMetaObjectHandler implements MetaObjectHandler {
     @Override

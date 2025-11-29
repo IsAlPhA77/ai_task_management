@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * 任务AI助手控制器
+ */
 @Slf4j
 @RestController
 @RequestMapping("/api/tasks")

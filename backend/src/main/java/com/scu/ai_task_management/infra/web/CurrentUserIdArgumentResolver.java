@@ -10,6 +10,9 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
+/**
+ * 当前用户ID参数解析器
+ */
 @Component
 public class CurrentUserIdArgumentResolver implements HandlerMethodArgumentResolver {
 

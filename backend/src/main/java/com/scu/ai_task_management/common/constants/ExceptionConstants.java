@@ -1,5 +1,8 @@
 package com.scu.ai_task_management.common.constants;
 
+/**
+ * 异常相关常量定义类
+ */
 public class ExceptionConstants {
 
     public static final String BUSINESS_CODE_OK = "200";

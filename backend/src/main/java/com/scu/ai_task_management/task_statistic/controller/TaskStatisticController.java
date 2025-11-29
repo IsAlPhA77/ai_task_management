@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 任务统计控制器
+ */
 @Slf4j
 @RestController
 @RequestMapping("/api/tasks")

@@ -5,7 +5,9 @@ import org.springframework.http.HttpStatus;
 
 import static com.scu.ai_task_management.common.constants.ExceptionConstants.BUSINESS_CODE_OK;
 
-
+/**
+ * 统一响应结果封装类
+ */
 @Data
 public class Result<T> {
     private String businessCode;     // 状态码

@@ -6,6 +6,9 @@ import com.scu.ai_task_management.task_query.model.TaskQueryDTO;
 
 import java.util.List;
 
+/**
+ * 任务查询服务接口
+ */
 public interface TaskQueryService {
 
     TaskVO getTaskById(Long userId, Long id);
